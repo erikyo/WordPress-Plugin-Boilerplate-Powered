@@ -30,7 +30,9 @@
         "lint:pkg-json": "wp-scripts lint-pkg-json",
         "packages-update": "wp-scripts packages-update",
         "plugin-zip": "wp-scripts plugin-zip",
-        "postinstall": "npm run build"
+        "postinstall": "npm run build",
+        "tests-install": "wp-env start && wp-env run tests-wordpress \"/var/www/html/wp-content/plugins/plugin-name/vendor/bin/codecept bootstrap\"",
+        "test": "wp-env start && wp-env run tests-wordpress \"/var/www/html/wp-content/plugins/plugin-name/vendor/bin/codecept run\""
     },
     "devDependencies": {
         "@babel/core": "^7.18.2",
